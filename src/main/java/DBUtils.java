@@ -128,6 +128,9 @@ import java.util.ArrayList;
                     user.setId(existResult.getString("id"));
                     user.setName(existResult.getString("username"));
                     user.setPassword(existResult.getString("password"));
+                    user.setPurchasePrice(existResult.getString("purchaseprice"));
+                    user.setPhone(existResult.getString("phone"));
+                    user.setEmail(existResult.getString("email"));
                     return user;
                 }
                 return null;

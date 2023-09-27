@@ -20,6 +20,9 @@ public class UserInfo {
     private JLabel emailLabel = new JLabel("Email", JLabel.CENTER);
     private JTextField email = new JTextField();
 
+    private JLabel  levelLabel=new JLabel("Level",JLabel.CENTER);
+
+    private JTextField level=new JTextField();
     private JPanel buttonField = new JPanel();
     private JButton update = new JButton("更新");
     private User user;
@@ -37,17 +40,28 @@ public class UserInfo {
         container.setLayout(new BorderLayout(10, 10));
         container.add(titleLabel, BorderLayout.NORTH);
 
-        inputField.setLayout(new GridLayout(5, 2, 10, 10));
+        inputField.setLayout(new GridLayout(6, 2, 10, 10));
         inputField.add(idLabel);
         id.setText(user.getId());
         id.setEditable(false);
         inputField.add(id);
+
+        inputField.add(levelLabel);
+        double price=Double.parseDouble(user.getPurchasePrice());
+        int levelValue=(int)(price/100);
+        String FinalLevel=Integer.toString(levelValue);
+        level.setText(FinalLevel);
+        level.setEditable(false);
+        inputField.add(level);
+
         inputField.add(usernameLabel);
         username.setText(user.getName());
         inputField.add(username);
+
         inputField.add(passwordLabel);
         password.setText(user.getPassword());
         inputField.add(password);
+
         inputField.add(phoneLabel);
         phone.setText(user.getPhone());
         inputField.add(phone);

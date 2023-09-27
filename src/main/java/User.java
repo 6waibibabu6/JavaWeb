@@ -59,10 +59,6 @@ public class User
     }
 
 
-    //public void removeFromCart(Goods product) {
-    //    shoppingCart.remove(product);
-    //}
-
     public  List<Goods> getShoppingCart(){return shoppingCart;}//获取购物车的方法
     public void setName(String name)
     {

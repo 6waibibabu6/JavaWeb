@@ -116,7 +116,7 @@ private void addEvent() {
                     // new UserInfo(DBUtils.getByName(user.getName()));//跳转到购物界面
                     currentUser = DBUtils.getByName(username);
                     user.setId(currentUser.getId());//需要给出User对象Id！！！！,后续用于购物车的处理
-                    new Shopping(user);
+                    new Shopping(currentUser);
                 }
                 mainFrame.dispose();
             }
