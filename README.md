@@ -1,0 +1,2 @@
+# JavaWeb
+本项目位于target目录下，其中唯一有main函数的主类为UserManagemnet类，运行此类就可使用购物系统。
